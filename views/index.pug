@@ -1,0 +1,25 @@
+doctype html
+html(lang="ko")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/static/css/index.css")
+        title YEAH
+    body 
+        h1 Guitar
+        div(id="list-template")
+            h2 Video List
+            button(id="list-button", type="button", onclick="list()") refresh
+            div(id="list")
+        div(id="add-template")
+            h2 Add new video
+            label(for="title-input") Title
+            input(type="text", name="title",id="title-input")
+            br
+            label(for="video-input") Select Video File
+            input(type="file", name="video", id="video-input")
+            br
+            button(id="upload-button" type="button", onclick="upload()") Upload
+            progress(id="upload-progress", max="1",value="0")
+        script(src="/static/js/index.js")
